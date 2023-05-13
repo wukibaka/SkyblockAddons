@@ -17,7 +17,7 @@ public class LocalizedStringsRequest extends RemoteFileRequest<JsonObject> {
     public LocalizedStringsRequest(@NonNull Language language) {
         //TODO: Fix this so it runs after getting language manifest
         super(String.format(
-                "https://distributions.crowdin.net/d7578b29286a48bcaf7fec87zgb/content/main/src/main/resources/lang/%s.json",
+                "https://github.wuki.moe/https://raw.githubusercontent.com/LittleStoryPlus/SkyblockAddons/main/src/main/resources/lang/%s.json",
                         language.getPath()),
                 new JSONResponseHandler<>(JsonObject.class),
                 !(language == Language.ENGLISH || language == Language.RUSSIAN), true);
